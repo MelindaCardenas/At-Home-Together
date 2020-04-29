@@ -2,25 +2,22 @@ The content below is an example project proposal / requirements document. Replac
 
 (___TODO__: your project name_)
 
-# Shoppy Shoperson 
+# AtHomeTogether
 
 ## Overview
 
 (___TODO__: a brief one or two paragraph, high-level description of your project_)
 
-Remembering what to buy at the grocery store is waaaaay too difficult. Also, shopping for groceries when you're hungry leads to regrettable purchases. Sooo... that's where Shoppy Shoperson comes in!
-
-Shoppy Shoperson is a web app that will allow users to keep track of multiple grocery lists. Users can register and login. Once they're logged in, they can create or view their grocery list. For every list that they have, they can add items to the list or cross off items.
-
+AtHomeTogether is a website to find video group calls to fit your needs-- whether it be a group study session, yoga lessons, or a video call party -- you can use the search engine on AtHomeTogether to find the right community for you. Have access to video calls 24/7 and meet new friends who share similar interests. 
 
 ## Data Model
 
 (___TODO__: a description of your application's data and their relationships to each other_) 
 
-The application will store Users, Lists and Items
+The application will store Users, List of All Groups, and List of Groups a User is Following
 
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
+* users can start a group and add it to the general list of groups (array)
+* users will have a list of groups they're following (array)
 
 (___TODO__: sample documents_)
 
@@ -28,9 +25,9 @@ An Example User:
 
 ```javascript
 {
-  username: "shannonshopper",
+  username: "here4studdybuddies",
   hash: // a password hash,
-  lists: // an array of references to List documents
+  followinglists: // an array of group objects representing groups user is following
 }
 ```
 
