@@ -1,20 +1,12 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
-
-(___TODO__: your project name_)
-
 # AtHomeTogether
 
 ## Overview
 
-(___TODO__: a brief one or two paragraph, high-level description of your project_)
-
-AtHomeTogether is a website to find video group calls to fit your needs-- whether it be a group study session, yoga lessons, or a video call party -- you can use the search engine on AtHomeTogether to find the right community for you. Have access to video calls 24/7 and meet new friends who share similar interests. 
+AtHomeTogether is a website to find video group calls to fit your needs-- whether it be a group study session, yoga lessons, or a video call party -- you can use the search engine on AtHomeTogether to find the right community for you. Have access to video calls 24/7 and meet new friends who share similar interests. Users can register with a username and password so they can join the groups they're interested in and have easy access to the group call links. 
 
 ## Data Model
 
-(___TODO__: a description of your application's data and their relationships to each other_) 
-
-The application will store Users, List of All Groups, and List of Groups a User is Following
+The application will store users, list of all groups, and list of groups the user has joined
 
 * users can start a group and add it to the general list of groups (array)
 * users will have a list of groups they're following (array)
@@ -27,21 +19,25 @@ An Example User:
 {
   username: "here4studdybuddies",
   hash: // a password hash,
-  followinglists: // an array of group objects representing groups user is following
+  groupslist: // an array of group objects representing groups user has joined
 }
 ```
 
-An Example List with Embedded Items:
+An Example Group:
 
 ```javascript
 {
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
+  name: "StudyGroup",
+  icon: //image 
+  arrMembers: // an array of user objects representing members
+}
+```
+
+An Example Group List:
+
+```javascript
+{
+  arrGroups: //array of all groups
 }
 ```
 
