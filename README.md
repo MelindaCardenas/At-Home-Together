@@ -11,7 +11,6 @@ The application will store users, list of all groups, and list of groups the use
 * users can start a group and add it to the general list of groups (array)
 * users will have a list of groups they're following (array)
 
-(___TODO__: sample documents_)
 
 An Example User:
 
@@ -44,15 +43,11 @@ An Example Group List:
 
 ## [Link to Commented First Draft Schema](db.js) 
 
-(___TODO__: create a first draft of your Schemas in db.js and link to it_)
-
 ## Wireframes
 
-(___TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc._)
+/home
 
-/list/create - page for creating a new shopping list
-
-![list create](documentation/list-create.png)
+![home](documentation/home.png)
 
 /list - page for showing all shopping lists
 
