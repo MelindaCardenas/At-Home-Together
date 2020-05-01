@@ -59,8 +59,8 @@ An Example Group List:
 
 ## Site map
                   
-At Home Together  --> home
-                  --> explore 
+At Home Together  --> home /n
+                  --> explore  /n
                   --> post --> (when form submitted) home
 
 ## User Stories or Use Cases
