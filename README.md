@@ -59,9 +59,7 @@ An Example Group List:
 
 ## Site map
                   
-At Home Together > home 
-                 > explore 
-                 > post > (when form submitted) home
+![site map](documents/sitemap.png)
 
 ## User Stories or Use Cases
 
