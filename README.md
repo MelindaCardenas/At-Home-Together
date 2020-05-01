@@ -58,8 +58,9 @@ An Example Group List:
 ![post](documents/post.png)
 
 ## Site map
-                  --> home
-At Home Together  --> explore 
+                  
+At Home Together  --> home
+                  --> explore 
                   --> post --> (when form submitted) home
 
 ## User Stories or Use Cases
