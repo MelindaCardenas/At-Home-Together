@@ -58,10 +58,9 @@ An Example Group List:
 ![post](documents/post.png)
 
 ## Site map
-
-(___TODO__: draw out a site map that shows how pages are related to each other_)
-
-Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/20/Sitemap_google.jpg), but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
+                  --> home
+At Home Together  --> explore 
+                  --> post --> (when form submitted) home
 
 ## User Stories or Use Cases
 
