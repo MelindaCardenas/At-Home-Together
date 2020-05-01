@@ -47,7 +47,7 @@ An Example Group List:
 
 /home
 
-![home](documentation/home.png)
+![home](documents/home.png)
 
 /list - page for showing all shopping lists
 
