@@ -11,5 +11,7 @@ const User = new Schema({
 const Group = new Schema({
 	name: String,
 	membersArr: Array,
-	
+
 })
+
+const groups = [];
