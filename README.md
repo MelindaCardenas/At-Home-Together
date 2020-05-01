@@ -45,17 +45,17 @@ An Example Group List:
 
 ## Wireframes
 
-/home
+/home - page to see posts by people in the groups you're a part of
 
 ![home](documents/home.png)
 
-/list - page for showing all shopping lists
+/explore - page for seeing active group calls and exploring other groups to join
 
-![list](documentation/list.png)
+![explore](documents/explore.png)
 
-/list/slug - page for showing specific shopping list
+/post - page to submit form to post group call link to groups
 
-![list](documentation/list-slug.png)
+![post](documents/post.png)
 
 ## Site map
 
