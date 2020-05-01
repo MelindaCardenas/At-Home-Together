@@ -82,8 +82,7 @@ An Example Group List:
     * Using Bootstrap 
     * https://bootstrapmade.com/demo/MyPortfolio/ inspiration 
 
-9-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit_)
-
+9-10 points total out of 8 required points 
 
 ## [Link to Initial Main Project File](app.js) 
 
