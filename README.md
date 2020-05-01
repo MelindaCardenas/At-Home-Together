@@ -63,8 +63,6 @@ An Example Group List:
 
 ## User Stories or Use Cases
 
-(___TODO__: write out how your application will be used through [user stories](http://en.wikipedia.org/wiki/User_story#Format) and / or [use cases](https://www.mongodb.com/download-center?jmp=docs&_ga=1.47552679.1838903181.1489282706#previous)_)
-
 1. as non-registered user, I can register a new account with the site
 2. as a non-registered and registered user, I can browse explore page and see posts
 3. as a registered user, I can log in to the site 
@@ -75,16 +73,16 @@ An Example Group List:
 
 * (5 points) Integrate user authentication
     * I'm going to be using passport for user authentication
-    * And account has been made for testing; I'll email you the password
-    * see <code>cs.nyu.edu/~jversoza/ait-final/register</code> for register page
-    * see <code>cs.nyu.edu/~jversoza/ait-final/login</code> for login page
-* (4 points) Perform client side form validation using a JavaScript library
-    * see <code>cs.nyu.edu/~jversoza/ait-final/my-form</code>
-    * if you put in a number that's greater than 5, an error message will appear in the dom
-* (5 points) vue.js
-    * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
+    * when user comes to the website, they're brought to the home page. If they are logged in already, it will look like the home page photo attached above. If they are not logged in, they will be brought to a login page where they can also make an account. 
+    
+* (3 points) Perform client side form validation using JavaScript library (https://validatejs.org/)
+    * errors integrated into the DOM w/ error messages
 
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit_)
+* (1-2 points) Use a CSS framework throughout site 
+    * Using Bootstrap 
+    * https://bootstrapmade.com/demo/MyPortfolio/ inspiration 
+
+9-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit_)
 
 
 ## [Link to Initial Main Project File](app.js) 
