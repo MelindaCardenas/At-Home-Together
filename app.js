@@ -1,13 +1,38 @@
+if (process.env.NODE_ENV !== 'production'){
+	require('dotenv').config()
+}
+
 const express = require('express');
 const path = require('path');
-const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
 const users = [];
+const bcrypt = require('bcrypt');
+const passport = require('passport');
+const flash = require('express-flash');
+const session = require('express-session');
+const initializePassport = require('./passport-config');
+
+initializePassport(
+	passport,
+	username =>users.find(user => user.username === username)
+);
+
+
 
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}))
+app.use(flash())
+app.use(session({
+	//SESSION_SECRET is in env
+	secret: process.env.SESSION_SECRET,
+	resave: false,
+	saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+
 
 app.get('/', function(req, res){
 	res.render('login');
@@ -46,6 +71,15 @@ app.get('/login', function(req, res){
 	res.render('login');
 	
 });
+
+app.post('/login', passport.authenticate('local',{
+	//list of options of things to modify
+	successRedirect: '/',
+	failureRedirect: '/login',
+	failureFlash: true
+})
+	
+);
 
 app.get('/post', function(req, res){
 	res.render('post');
