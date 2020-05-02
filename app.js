@@ -36,7 +36,8 @@ app.use(passport.session())
 
 
 app.get('/', function(req, res){
-	res.render('login');
+	//res.render('login');
+	res.render('home.hbs', {name:req.body.username})
 	
 });
 
