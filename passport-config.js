@@ -1,3 +1,5 @@
+//source code from : https://www.youtube.com/watch?v=-RCnNyD0L-s
+
 const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcrypt')
 
