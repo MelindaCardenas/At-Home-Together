@@ -57,6 +57,14 @@ An Example Group List:
 
 ![post](documents/post.png)
 
+/login - before you can see home 
+![login](documents/login.png)
+
+/register - option provided beneath login form 
+![register](documents/register.png)
+
+
+
 ## Site map
                   
 ![site map](documents/sitemap.png)
