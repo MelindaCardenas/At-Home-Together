@@ -15,7 +15,8 @@ const initializePassport = require('./passport-config');
 
 initializePassport(
 	passport,
-	username =>users.find(user => user.username === username)
+	username =>users.find(user => user.username === username),
+	id =>users.find(user => user.id === id)
 );
 
 
@@ -66,6 +67,7 @@ app.post('/register', async(req, res)=>{
 	}
 	console.log('users: ', users);
 });
+
 
 app.get('/login', function(req, res){
 	res.render('login');
