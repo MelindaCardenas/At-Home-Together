@@ -7,6 +7,7 @@ const users = [];
 
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({extended: false}))
 
 app.get('/', function(req, res){
 	res.render('login');
@@ -25,10 +26,10 @@ app.get('/register', function(req, res){
 
 app.post('/register', async(req, res)=>{
 	try{
-		const hashedPassword = await bcrypt.has(req.body.password, 10)
+		const hashedPassword = await bcrypt.hash(req.body.password, 10)
 		users.push({
 			id: Date.now().toString(),
-			name: req.body.name,
+			username: req.body.username,
 			email: req.body.email,
 			password: hashedPassword
 		})
@@ -38,7 +39,7 @@ app.post('/register', async(req, res)=>{
 	catch{
 		res.redirect('/register')
 	}
-	console.log(users);
+	console.log('users: ', users);
 });
 
 app.get('/login', function(req, res){
