@@ -34,10 +34,18 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+//check if user is authenticated
+function checkAuthenticated(req,res,next){
+	if (req.isAuthenticated()){
+		return next()
+	}
 
-app.get('/', function(req, res){
+	res.redirect('/login')
+}
+
+app.get('/', checkAuthenticated,(req, res) => {
 	//res.render('login');
-	res.render('home.hbs', {name:req.body.username})
+	res.render('home', {name:req.user.username})
 	
 });
 
