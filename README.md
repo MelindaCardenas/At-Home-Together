@@ -96,7 +96,8 @@ An Example Group List:
 
 ## Annotations / References Used
 
-1. [passport.js authentication docs](http://passportjs.org/docs)(https://www.youtube.com/watch?v=-RCnNyD0L-s) - Source Code Based On This: https://github.com/nyu-csci-ua-0480-008-spring-2020/MelindaCardenas-final-project/blob/2aade6bfe723c9679b4720b613f53c3eb4da26ce/passport-config.js#L1-L34 
+1. [passport.js authentication docs](http://passportjs.org/docs)(https://www.youtube.com/watch?v=-RCnNyD0L-s) - Source Code Based On This: https://github.com/nyu-csci-ua-0480-008-spring-2020/MelindaCardenas-final-project/blob/2aade6bfe723c9679b4720b613f53c3eb4da26ce/passport-config.js#L1-L34  
+
 2. [bootstrap inspiration](https://bootstrapmade.com/demo/MyPortfolio/) - Source code non existent yet
 
 
