@@ -73,7 +73,7 @@ An Example Group List:
 
 * (5 points) Integrate user authentication
     * I'm going to be using passport for user authentication
-    * when user comes to the website, they're brought to the home page. If they are logged in already, it will look like the home page photo attached above. If they are not logged in, they will be brought to a login page where they can also make an account. 
+    * user has option to register. user + their info (hashed) is saved into an array. they then have the option to log in and ideally will be told if there was an error.  
     
 * (3 points) Perform client side form validation using JavaScript library (https://validatejs.org/)
     * errors integrated into the DOM w/ error messages
