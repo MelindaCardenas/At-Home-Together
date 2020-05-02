@@ -90,7 +90,8 @@ An Example Group List:
 
 (___TODO__: list any tutorials/references/etc. that you've based your code off of_)
 
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
+1. [passport.js authentication docs](http://passportjs.org/docs)
+https://www.youtube.com/watch?v=-RCnNyD0L-s - (add link to source code that was based on this)
 2. [](https://bootstrapmade.com/demo/MyPortfolio/) - 
 
 
