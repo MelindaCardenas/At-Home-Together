@@ -1,10 +1,29 @@
 <h2>Post</h2>
-<p>Find friends while social distancing by sharing your video call link. You can post about a study session, yoga class, or event you're planning. </p>
+<p>Find friends while social distancing by sharing your video call link. You can post about a study session, yoga class, or event you're planning. Don't forget to include info on how to join or a link if you can :-) </p>
 
-<div class="form">
-	<form action="/post" method="get">
-		<input placeholder="share your group video call idea!" type="text" id="tagQuery" name="tagQuery">
-		<input type="submit" value="post">
-		
-	</form>
+
+<form action="/post" method="POST">
+<div>
+	<label for="name">Your Name: </label>
+	<input type="text" id="name" name="name" required>
 </div>
+
+<div>
+	<label for="description">Post Description: </label>
+	<input placeholder="share your group video call idea!" type="text" id="description" name="description" required>
+</div>
+
+<div>
+	<label for="category">Category: </label>
+	<input list="categories" name="category">
+ 	<datalist id="categories">
+    <option value="Study">
+    <option value="Exercise">
+    <option value="Art">
+    <option value="Activism">
+    <option value="Other">
+  </datalist>
+</div>
+
+
+<button type="submit">Submit Post!</button>

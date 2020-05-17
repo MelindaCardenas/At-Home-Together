@@ -32,8 +32,8 @@ module.exports = mongoose.model('User', UsersSchema);
 
 //POST SCHEMA 
 const PostSchema = new Schema({
+  name: String,
   post: String,
-  link: String,
   category: String
 })
 

@@ -11,8 +11,9 @@ const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
-//constructor
+//constructors
 const User = mongoose.model('User');
+const Post = mongoose.model('Post');
 
 //const initializePassport = require('./passport-config');
 /*
@@ -104,7 +105,6 @@ app.get('/login', checkNotAuthenticated,(req, res)=>{
 	
 });
 
-
 app.post('/login', passport.authenticate('local',{
 	successRedirect: '/',
 	failureRedirect: '/login',
@@ -118,7 +118,23 @@ app.get('/post', function(req, res){
 	
 });
 
+app.post('/post', function(req, res){
+	const newPost = new Post({
+		name: req.body.name,
+		post: req.body.description,
+		category: req.body.category
+	})
+
+	newPost.save((err, savedPost)=>{
+		console.log(savedPost);
+  	})
+
+	res.render('explore');
+	
+});
+
 app.get('/explore', function(req, res){
+	//req.body.
 	res.render('explore');
 	
 });
