@@ -120,23 +120,25 @@ app.get('/post', function(req, res){
 
 app.post('/post', function(req, res){
 	const newPost = new Post({
+		id: Date.now().toString(),
 		name: req.body.name,
 		post: req.body.description,
 		category: req.body.category
 	})
 
 	newPost.save((err, savedPost)=>{
-		console.log(savedPost);
+		console.log(savedPost, err);
   	})
 
-	res.render('explore');
+	res.redirect('/explore');
+	//res.render('explore', {newPost:newPost});
 	
 });
 
 app.get('/explore', function(req, res){
-	//req.body.
-	res.render('explore');
-	
+	Post.find({},(err,result)=>{
+		res.render('explore', {posts:result});
+	})	
 });
 
 app.delete('/logout', (req,res)=>{

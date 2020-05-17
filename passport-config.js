@@ -22,7 +22,6 @@ passport.use(new LocalStrategy(
 			if (!user){
 				return done(null,false)
 			}
-			console.log(password, user.password);
 
 			if (!bcrypt.compareSync(password, user.password)){
 				console.log("passwords do not match");
