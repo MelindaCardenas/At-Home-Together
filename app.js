@@ -5,16 +5,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 //const users = [];
+let user;
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
-
-
-//const initializePassport = require('./passport-config');
-
 //constructor
 const User = mongoose.model('User');
+
+//const initializePassport = require('./passport-config');
 /*
 initializePassport(
 	passport,		
@@ -36,13 +35,6 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-/*
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-*/
 
 //check if user is authenticated
 function checkAuthenticated(req,res,next){
@@ -54,7 +46,7 @@ function checkAuthenticated(req,res,next){
 	res.redirect('/login')
 }
 
-app.get('/', checkAuthenticated,(req, res) => {
+app.get('/',checkAuthenticated, (req, res) => {
 	//res.render('login');
 	res.render('home', {name:req.user.username})
 });
@@ -81,7 +73,7 @@ app.post('/register', async(req, res)=>{
 		newUser.save((err, savedUser)=>{
 			console.log(savedUser);
   		})
-		/*
+		/* //without mongo
 		users.push({
 			id: Date.now().toString(),
 			username: req.body.username,
@@ -104,36 +96,13 @@ app.get('/login', function(req, res){
 	
 });
 
-/*
+
 app.post('/login', passport.authenticate('local',{
 	successRedirect: '/',
 	failureRedirect: '/register',
 	failureFlash: true
 })	
 );
-*/
-
-//AUTHENTICATION WITH BCRYPT -- WORKS, BUT TROUBLE MAKING IT WORK W checkAuthenticated FUNCTION ABOVE
-
-app.post('/login', async (req,res)=>{
-	//(edited) code from https://www.thepolyglotdeveloper.com/2019/02/hash-password-data-mongodb-mongoose-bcrypt/
-	try {
-        let user = await User.findOne({ username: req.body.username }).exec();
-        if(!user) {
-            return res.status(400).send({ message: "The username does not exist" });
-        }
-        if(!await bcrypt.compareSync(req.body.password, user.password)) {
-            return res.status(400).send({ message: "The password is invalid" });
-        }
-        //success redirect - problem : '/' send user back to login
-        //res.redirect('/')
-        res.send({ message: "The username and password combination is correct!" });
-    } catch (error) {
-        res.status(500).send("something went wrong");
-    }
-}
-);
-
 
 
 app.get('/post', function(req, res){
