@@ -122,7 +122,7 @@ app.get('/post', function(req, res){
 
 app.post('/post', function(req, res){
 	const newPost = new Post({
-		id: Date.now().toString(),
+		//_id: Date.now().toString(),
 		name: req.body.name,
 		post: req.body.description,
 		category: req.body.category

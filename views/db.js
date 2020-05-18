@@ -41,7 +41,7 @@ PostSchema.plugin(passportLocalMongoose);
 module.exports = mongoose.model('Post', PostSchema);
 
 //CONNECT TO DATABASE
-mongoose.connect(dbconf, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },  (err, database) => {
+mongoose.connect(dbconf, { autoIndex: false, useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },  (err, database) => {
   if (err) {
     return console.log(err);
   } else {
