@@ -30,7 +30,9 @@ app.use(express.urlencoded({extended: false}))
 app.use(flash())
 app.use(session({
 	//SESSION_SECRET is in environment variable
-	secret: process.env.SESSION_SECRET,
+	//secret: process.env.SESSION_SECRET,
+	//since env is in the gitignore, it was causing trouble during deployment
+	secret: 'secret',
 	resave: false,
 	saveUninitialized: false
 }))

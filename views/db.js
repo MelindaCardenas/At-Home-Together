@@ -9,7 +9,6 @@ if (process.env.NODE_ENV === 'PRODUCTION'){
   const fn = path.join(__dirname, '../config.json');
   const data = fs.readFileSync(fn);
   const conf = JSON.parse(data);
-  console.log(conf);
   dbconf = conf.dbconf;
 }
 
