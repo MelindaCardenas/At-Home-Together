@@ -60,11 +60,19 @@ function checkNotAuthenticated(req,res,next){
 app.get('/',checkAuthenticated, (req, res) => {
 	//res.render('login');
 	res.render('home', {name:req.user.username})
+	//res.redirect('/home')
 });
 
 app.get('/home', checkAuthenticated,(req, res)=>{
 	res.render('home');
-	
+	/*
+	Post.find({},(err,foundPosts)=>{
+		if(err){
+			console.log(err);
+		}
+		res.json(foundPosts);
+	})
+	*/
 });
 
 app.get('/register', checkNotAuthenticated,(req, res)=>{
