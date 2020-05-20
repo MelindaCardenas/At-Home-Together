@@ -4,12 +4,9 @@ const mongoose = require('mongoose'),
 	LocalStrategy = require('passport-local').Strategy,
 	User = mongoose.model('User'),
 	bcrypt = require('bcrypt');
-	//
-
-//passport.use(new LocalStrategy(User.authenticate()));
 
 
-//below code from http://www.passportjs.org/packages/passport-local/
+//below code (w minor alterations) from http://www.passportjs.org/packages/passport-local/
 passport.use(new LocalStrategy(
 
 	function(username, password, done){
@@ -33,25 +30,6 @@ passport.use(new LocalStrategy(
 
 ));
 
-/*
-function verifyPassword(password){
-	try{
-		if(bcrypt.compare(password, user.password)){
-			//no error, return user
-			return done(null,user)
-		}
-		else{
-			//no error, no user, msg
-			return done(null,false,{message: 'password incorrect'})
-			}
-	}
-	//error
-	catch(e){
-		return done(e)
-	}
-
-}
-*/
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
