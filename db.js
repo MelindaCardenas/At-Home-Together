@@ -2,16 +2,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//password will be hashed
 const User = new Schema({
-	username: String,
-	password: String,
-	followArr: Array
+	name: String,
+	email: String,
+	password: String
 
 })
 
-const Group = new Schema({
+//purpose of category is to eventually be able to categorize and filter posts on explore page
+const Post = new Schema({
 	name: String,
-	membersArr: Array,
+	post: String,
+	category: String
 
 })
 
