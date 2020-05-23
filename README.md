@@ -1,5 +1,5 @@
 # AtHomeTogether
-
+deployed site thus far: http://linserv1.cims.nyu.edu:18766/login
 ## Overview
 
 AtHomeTogether is a website to find video group calls to fit your needs-- whether it be a group study session, yoga lessons, or a video call party -- you can browse the explore page on AtHomeTogether to find the right community for you. Have access to video calls 24/7 and meet new friends who share similar interests. Users can register with a username and password so they can save posts, follow people they're interested in, and have easy access to the group call links. 
