@@ -1,8 +1,11 @@
 # AtHomeTogether
-deployed site thus far: http://linserv1.cims.nyu.edu:18766/login
 ## Overview
 
 AtHomeTogether is a website to find video group calls to fit your needs-- whether it be a group study session, yoga lessons, or a video call party -- you can browse the explore page on AtHomeTogether to find the right community for you. Have access to video calls 24/7 and meet new friends who share similar interests. Users can register with a username and password so they can save posts, follow people they're interested in, and have easy access to the group call links. 
+
+# See the Site 
+
+To see the site, download the project to your computer, open terminal, go to project folder, and type "node app.js" and then press enter. The site should appear on localhost:3000
 
 ## Data Model
 
@@ -73,20 +76,18 @@ Not implemented/To Do Still:
 
 ## Research Topics
 
-* (5 points) Integrate user authentication
+* Integrate user authentication
     * I'm going to be using passport for user authentication
     * user has option to register. user + their info (hashed) is saved into mongo database. they then have the option to log in and ideally will be told if there was an error.  
     
-    (Not Implemented)
-* (3 points) Perform client side form validation using JavaScript library (https://validatejs.org/)
+# Looking Forward
+
+* Perform client side form validation using JavaScript library (https://validatejs.org/)
     * errors integrated into the DOM w/ error messages
 
-* (1-2 points) Use a CSS framework throughout site 
+* Use a CSS framework throughout site 
     * Using Bootstrap 
     * https://bootstrapmade.com/demo/MyPortfolio/ inspiration 
-
-9-10 points total out of 8 required points 
-I completed 6-7 points 
 
 ## [Link to Initial Main Project File](app.js) 
 
